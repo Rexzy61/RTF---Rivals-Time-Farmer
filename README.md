@@ -1,2 +1,2 @@
 # RTF---Rivals-Time-Farmer
-A Script that Automaticly Farms Mastery on Rivals Weapons
+A Script that Farms Mastery on Rivals Weapons
