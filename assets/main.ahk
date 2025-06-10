@@ -2,6 +2,8 @@
 #SingleInstance Force
 ;load InI Values
 iniFile := A_ScriptDir "\data.ini"
+global Count := 1
+global Count
 
 X1 := IniRead(iniFile, "Settings", "X1", "Not Set or Found")
 Y1 := IniRead(iniFile, "Settings", "Y1", "Not Set or Found")
@@ -23,6 +25,10 @@ MsgBox "Press Ok if you are on the Weapon select Screen."
 
 MainHandler(*)
 {
+global Count
+if Count = 1
+{
+
 WinActivate("Roblox")
 Sleep(1000)
 
@@ -46,18 +52,55 @@ Sleep (100)
 MouseClick("Left")
 
 Sleep(500)
+global Count
+Count := Count + 1
+MsgBox Count
 
 MouseMove(X4, Y4)
 MouseMove(X4, Y4)
 Sleep (100)
 MouseClick("Left")
+
+} else if Count != 1
+
+WinActivate("Roblox")
+Sleep(1000)
+
+MouseMove(818, 478)
+MouseMove(818, 478)
+Sleep (100)
+MouseClick("Left")
+
+Sleep(500)
+
+MouseMove(818, 478)
+MouseMove(818, 478)
+Sleep (100)
+MouseClick("Left")
+
+Sleep(500)
+
+MouseMove(818, 478)
+MouseMove(818, 478)
+Sleep (100)
+MouseClick("Left")
+
+Sleep(500)
+
+MouseMove(818, 478)
+MouseMove(818, 478)
+Sleep (100)
+MouseClick("Left")
+
 }
 
 MainHandler()
+Sleep(2500)
 
 loop
 {
     MainHandler()
+    Sleep(2500)
     Send("1")
     Sleep(Time)
     Send("2")
