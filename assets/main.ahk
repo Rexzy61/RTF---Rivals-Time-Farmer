@@ -58,7 +58,6 @@ MainHandler()
 loop
 {
     MainHandler()
-    Sleep(Time)
     Send("1")
     Sleep(Time)
     Send("2")
