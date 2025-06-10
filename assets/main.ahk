@@ -21,6 +21,8 @@ F6:: OnExitHandler()
 
 MsgBox "Press Ok if you are on the Weapon select Screen."
 
+MainHandler(*)
+{
 WinActivate("Roblox")
 Sleep(1000)
 
@@ -49,9 +51,14 @@ MouseMove(X4, Y4)
 MouseMove(X4, Y4)
 Sleep (100)
 MouseClick("Left")
+}
+
+MainHandler()
 
 loop
 {
+    MainHandler()
+    Sleep(Time)
     Send("1")
     Sleep(Time)
     Send("2")
