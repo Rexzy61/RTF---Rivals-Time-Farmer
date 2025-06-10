@@ -54,7 +54,6 @@ MouseClick("Left")
 Sleep(500)
 global Count
 Count := Count + 1
-MsgBox Count
 
 MouseMove(X4, Y4)
 MouseMove(X4, Y4)
